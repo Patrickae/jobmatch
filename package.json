@@ -1,0 +1,27 @@
+{
+  "name": "jobmatch",
+  "version": "1.0.0",
+  "description": "match employers with perspective employees",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patrickae/jobmatch.git"
+  },
+  "keywords": [
+    "job",
+    "search",
+    "companies",
+    "node",
+    "sequelize"
+  ],
+  "author": "Janet, Art, Ed, and Andy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Patrickae/jobmatch/issues"
+  },
+  "homepage": "https://github.com/Patrickae/jobmatch#readme"
+}
