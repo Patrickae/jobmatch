@@ -4,11 +4,13 @@ $(document).ready(function() {
   $("#submit-review").on("click", function(event) {
       event.preventDefault();
 
-      var employmentStatus = false;
+      var employmentStatus;
 
       if($("#employment").val() == "Current Employee"){
         employmentStatus = true;
-      }; 
+      }else{
+        employmentStatus = false;
+        }; 
 
       var newReview = {
         currentEmployee: employmentStatus,

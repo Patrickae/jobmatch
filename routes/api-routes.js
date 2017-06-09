@@ -14,6 +14,9 @@ app.get("/api/reviews",function(req,res){
 	})
 });
 
+
+//posting an entry into the reviews table 
+//check review.js for the sender side
 app.post("/api/reviews", function(req,res){
 
 	console.log(req.body);
