@@ -4,8 +4,14 @@ $(document).ready(function() {
   $("#submit-review").on("click", function(event) {
       event.preventDefault();
 
+      var employmentStatus = false;
+
+      if($("#employment").val() == "Current Employee"){
+        employmentStatus = true;
+      }; 
+
       var newReview = {
-        currentEmployee: $("#employment").val(),
+        currentEmployee: employmentStatus,
         rating: $("#rating").val(),
         q1: $("#overallReview").val().trim(),
         q2: $("#pros").val().trim(),
@@ -14,8 +20,18 @@ $(document).ready(function() {
         q5: $("#employerAdvice").val().trim()
       };
 
-      console.log(newReview);
+      
+
+      submitPost(newReview);
     
 	});
+
+
+
+  function submitPost(Post) {
+    $.post("/api/reviews/", Post, function() {
+      window.location.href = "/reviews";
+    });
+  }
 
 });
