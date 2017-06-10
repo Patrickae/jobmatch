@@ -5,13 +5,15 @@ $(document).ready(function() {
       event.preventDefault();
 
       var employmentStatus;
-
+//set the employment status to a boolean value
       if($("#employment").val() == "Current Employee"){
         employmentStatus = true;
       }else{
         employmentStatus = false;
         }; 
 
+
+//save info as an onject to sent to the api
       var newReview = {
         currentEmployee: employmentStatus,
         rating: $("#rating").val(),
@@ -29,7 +31,7 @@ $(document).ready(function() {
 	});
 
 
-
+//create function to post to the API
   function submitPost(Post) {
     $.post("/api/reviews/", Post, function() {
       window.location.href = "/reviews";

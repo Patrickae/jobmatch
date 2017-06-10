@@ -30,7 +30,8 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //routes
-require("./routes/api-routes.js")(app);
+require("./routes/review-api-routes.js")(app);
+require("./routes/company-api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
 // Syncing our sequelize models and then starting our express app
