@@ -3,6 +3,10 @@
 var express = require('express');
 var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
+var passport = require('passport');
+var session = require('express-session');
+var cookieParser = require('cookie-parser');
+
 
 //set up express app
 var PORT = process.env.PORT || 8080;
@@ -16,6 +20,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+app.use(cookieParser()); // read cookies (needed for auth)
+app.set('view engine', 'ejs'); // set up ejs for templating
 
 // Override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
@@ -40,3 +46,12 @@ db.sequelize.sync({ force: true }).then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+// required for passport
+app.use(session({
+    secret: 'job match', // session secret
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+
