@@ -12,6 +12,8 @@ app.get("/api/reviews",function(req,res){
 	db.review.findAll({}).then(function(results){
 		res.json(results);
 	})
+
+
 });
 
 
@@ -32,7 +34,12 @@ app.post("/api/reviews", function(req,res){
 		question5: req.body.q5
 
 	}).then(function(results){
-		res.json(results)
+		
+		app.get("/api/results", function(req,res){
+			res.json(results);
+		}) 
+
+
 	});
 })
 
