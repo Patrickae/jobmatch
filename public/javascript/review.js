@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 //create function to post to the API
   function submitPost(Post) {
-    $.post("/api/reviews/", Post, function() {
+    $.post("/api/reviews", Post, function() {
       window.location.href = "/reviews";
     });
   }

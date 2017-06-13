@@ -7,7 +7,7 @@ $(document).ready(function() {
 	$("#jobSearchBtn").on("click", function(){
 
 		//save entries as variables
-	var position = $("#positionSearch").val().trim();
+	var position = $("#position").val().trim();
 
 	var location = $("#citySearch").val().trim();
 

@@ -6,13 +6,15 @@ const indeed = require('indeed-scraper');
 module.exports = function(app){
 
 	//when following this route
-	app.get("/results/:location/:type/:jobLevel?", function(req, res){
+	app.get("/results/:location?/:type?/:jobLevel?", function(req, res){
 
 		//use regex to replace + with " "
 		var position = req.params.type.replace(/[(+)]+/g, " ").toLowerCase();
 		var location = req.params.location.replace(/[(+)]+/g, " ").toLowerCase();
 		 //you will get the below 
 		 console.log(position);
+
+		 
 		const queryOptions = {
 		  query: position,
 		  city: req.params.location,
