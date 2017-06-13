@@ -6,23 +6,18 @@ module.exports = function(sequelize, DataTypes){
 			type: DataTypes.STRING,
 			allowNull: false
 		},
-		indeedId:{
-			type: DataTypes.INTEGER,
-			allowNull: false
-		},
-		experience:{
-			type: DataTypes.STRING,
-			allowNull: false
-		},
 		city:{
 			type: DataTypes.STRING,
 			allowNull: false
 		},
-		state:{
-			type: DataTypes.STRING,
-			allowNull: false,
-			validate:{
-				len:[2]
+		rating:{
+			type: DataTypes.INTEGER,
+			allowNull: false
+		},
+		number_reviews:{
+			type: DataTypes.INTEGER,
+			allowNull: false
+		
 			}
 		}
 	})
