@@ -22,7 +22,7 @@ $(document).ready(function() {
 
  function submitNewUser(Post) {
   $.post("api/user/", Post, function(){
-    window.location.href = "/registration";
+    window.location.href = "/search";
   });
  }
 
@@ -32,4 +32,6 @@ $("#firstName").val("");
 $("#lastName").val("");
 $("#email").val("");
 $("#location").val("");
+
+
 });
