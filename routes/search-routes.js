@@ -25,7 +25,14 @@ module.exports = function(app){
 		};
 
 		indeed.query(queryOptions).then(function(result) {
+			console.log(result)
+			// function filterByTitle(job){
+			// 	return job.title.includes(position)
+			// }
+			// var filterArr = result.filter(filterByTitle)
+			// console.log(filterArr)
 
+			//handlebars object for posting result
 			var hbsObject = {
 				posting: result
 			};
