@@ -24,7 +24,7 @@ $(document).ready(function() {
 
 
 		//redirect to search results
-		window.location.href = "/results/" + location + "/" + position + "/" + level;
+		window.location.href = "/results?location=" + location + "&keyword=" + position + "&joblevel=" + level;
 
 
 
