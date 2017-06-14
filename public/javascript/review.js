@@ -25,7 +25,6 @@ $(document).ready(function() {
       };
 
       
-
       submitPost(newReview);
     
 	});
@@ -33,8 +32,8 @@ $(document).ready(function() {
 
 //create function to post to the API
   function submitPost(Post) {
-    $.post("/api/reviews", Post, function() {
-      window.location.href = "/reviews";
+    $.post("/api/reviews", Post).then(function() {
+      window.location.href = "/api/reviews";
     });
   }
 

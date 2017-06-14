@@ -43,6 +43,7 @@ require("./routes/review-api-routes.js")(app);
 require("./routes/company-api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 require("./routes/search-routes.js")(app);
+// require("./associations")(db);
 
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync({ force: true }).then(function() {

@@ -1,5 +1,7 @@
 // Dependencies
 var path  = require ("path");
+var db = require("../models");
+
 
 //export routes
 
@@ -23,6 +25,27 @@ module.exports = function(app){
 	app.get("/search", function(req,res){
 
 		res.sendFile(path.join(__dirname, "../public/search.html"))
+	});
+
+	app.get("/profile", function(req,res){
+
+		// var selectedCompany = req.query.companyName;
+
+		// console.log(req.query.companyName);
+
+		db.review.findAll({raw:true}).then(function(results){
+
+			var hbsObject = {
+				thisCompany: req.query.companyName,
+				review: results
+			};
+
+					
+
+			res.render("profile", hbsObject);
+		
+		})
+
 	});
 
 

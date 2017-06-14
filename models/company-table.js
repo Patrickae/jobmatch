@@ -6,21 +6,17 @@ module.exports = function(sequelize, DataTypes){
 			type: DataTypes.STRING,
 			allowNull: false
 		},
-		city:{
-			type: DataTypes.STRING,
-			allowNull: false
-		},
 		rating:{
 			type: DataTypes.INTEGER,
-			allowNull: false
+			allowNull: true
 		},
 		number_reviews:{
 			type: DataTypes.INTEGER,
-			allowNull: false
-		
+			allowNull: true		
 			}
 			
-	})
+	});
 
 	return company;
 };
+		

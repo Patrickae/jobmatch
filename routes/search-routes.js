@@ -13,11 +13,9 @@ module.exports = function(app){
 		var keyword = req.query.keyword.replace(/[(+)]+/g, " ").toLowerCase();
 		var location = req.query.location.replace(/[(+)]+/g, " ").toLowerCase();
 		 //you will get the below 
-		 
 
 		 console.log(req.query);
 		 console.log(keyword);
-
 		 
 		const queryOptions = {
 		  query: keyword,
