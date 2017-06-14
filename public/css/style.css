@@ -1,0 +1,24 @@
+
+.text-center{
+    text-decoration-color: blue;
+}
+
+.schedule-container {
+    min-width: 800px;
+}
+
+.input-container {
+    min-width: 800px;
+}
+
+body {
+    background: url('../images/eunique.jpg');
+    background-size: 800px;
+}
+
+
+.jumbotron {
+    color: white;
+    background-color: rgba(0,0,0,0.3);
+    min-width: 800px;
+}
