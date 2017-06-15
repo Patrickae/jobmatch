@@ -1,20 +1,22 @@
 	<div class = "container">
-		<h1>Your Perfect Job Match May Below!</h1>
-	
-		<div>
-		{{#each posting}}
+		<h1 class="text-center">Your Perfect Job Match May Below!</h1>
 
-		<div class="panel panel-default">
-  			<div class="panel-heading">
-   			 <h3 class="panel-title">{{this.title}}</h3>   				 
- 			 </div>
+		<hr>
+		
+			<div>
+				{{#each posting}}
+
+			<div class="panel panel-default">
+  				<div class="panel-heading">
+   			 	<h3 class="panel-title">{{this.title}}</h3>   				 
+ 			 	</div>
  			<div class="panel-body">
     			<h4>{{this.company}}</h4>
     			<h5>{{this.location}}</h5>
     			<br/>
     			<p> {{this.summary}}</p>
     			<a href ={{this.url}} class="btn btn-success" target="_blank"><span class="glyphicon glyphicon-search"></span></a>
-    			<button class="btn btn-primary profileBtn" value="{{this.company}}"">View Company Profile</button>
+    			<button class="btn btn-primary profileBtn" value="{{this.company}}">View Company Profile</button>
   			</div>
 		</div>
 			
