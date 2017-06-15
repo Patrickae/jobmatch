@@ -21,14 +21,14 @@ app.get("/api/reviews",function(req,res){
 //posting an entry into the reviews table 
 //check review.js for the sender side
 
-app.post("/api/reviews", function(req,res){
+app.post("/reviews", function(req,res){
 
-	console.log(req.body);
-
+	
+	console.log(req.query);
 
 
 	db.review.create({
-		companyName:"Google",
+		companyName:req.body.thisCompany,
 		rating: req.body.rating,
 		reviewerStatus: req.body.currentEmployee,
 		question1: req.body.q1,
@@ -37,6 +37,8 @@ app.post("/api/reviews", function(req,res){
 		question4: req.body.q4,
 		question5: req.body.q5
 
+	}).then(function(){
+		res.redirect("/profile?companyName="+req.query.companyName)
 	})
 })
 

@@ -32,8 +32,8 @@ $(document).ready(function() {
 
 //create function to post to the API
   function submitPost(Post) {
-    $.post("/api/reviews", Post).then(function() {
-      window.location.href = "/api/reviews";
+    $.post("/reviews", Post).then(function() {
+        // window.location.href = "/search";
     });
   }
 
