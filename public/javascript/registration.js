@@ -19,7 +19,7 @@ $('#myModal').on('shown.bs.modal', function () {
       
     };
 
-    console.log(newUser)
+    console.log(newUser);
     submitNewUser(newUser);
 
   });
