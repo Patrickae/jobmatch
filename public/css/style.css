@@ -16,6 +16,10 @@ body {
     background-size: 800px;
 }
 
+h1 {
+	color: red;
+}
+
 
 .jumbotron {
     color: white;
