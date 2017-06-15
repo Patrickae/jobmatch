@@ -29,11 +29,10 @@ module.exports = function(app){
 
 	app.get("/profile", function(req,res){
 
-		// var selectedCompany = req.query.companyName;
+		
 
-		// console.log(req.query.companyName);
-
-		db.review.findAll({raw:true}).then(function(results){
+		db.review.findAll({where:{
+			companyName: req.query.companyName},raw:true}).then(function(results){
 
 			var hbsObject = {
 				thisCompany: req.query.companyName,
