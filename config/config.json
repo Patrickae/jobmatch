@@ -1,15 +1,8 @@
+
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    "password": "Tminus987",
-=======
-    "password": "milena",
->>>>>>> Stashed changes
-=======
     "password": "",
->>>>>>> 3c7cdd240d41f89af0f4594a0e005ba706c6de5a
     "database": "jobmatch",
     "host": "127.0.0.1",
     "dialect": "mysql"
