@@ -12,6 +12,7 @@
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
 	
 
 	</head>
@@ -19,35 +20,53 @@
 		
 		<div class="container">
 
+
+
 			<div class="jumbotron">
 				<h1 class="text-center">Youniquee</h1>
 				<h3>Please take a moment to fill out this registration form so that we can best match you with you dream job.</h3>
 			</div>
+			<!-- Button trigger modal -->
+	<button type="button text-center" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+	  Registration
+	</button>
 
-		<form id="contact-form" method="POST" action="" role="form">
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	        		<h3 class="modal-title" id="exampleModalLongTitle">Registration Form</h3>
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          		<span aria-hidden="true">&times;</span>
+	        		</button>
+	      		</div>
+	      		<div class="modal-body">
 
-		    <div class="messages"></div>
+				<form id="contact-form" role="form">
 
-		    <div class="controls">
+		    	<!-- <div class="messages"></div> -->
 
-		        <div class="row">
-		            <div class="col-sm-6">
-		                <div class="form-group">
-		                    <label for="firstName">Firstname *</label>
-		                    <input id="firstName" type="text" name="name" class="form-control" placeholder="Please enter your firstname *"
-		                    required="required" data-error="Firstname is required.">
-		                    <div class="help-block with-errors"></div>
-		                </div>
-		            </div>
-		            <div class="col-sm-6">
-		                <div class="form-group">
+		    		<div class="controls">
+
+		        		<div class="row">
+		            			<div class="col-sm-6">
+		                			<div class="form-group">
+		                    		<label for="firstName">Firstname *</label>
+		                    		<input id="firstName" type="text" name="name" class="form-control" placeholder="Please enter your firstname *"
+		                    		required="required" data-error="Firstname is required.">
+		                    		<div class="help-block with-errors"></div>
+		                		</div>
+		            		</div>
+		            	<div class="col-sm-6">
+		                	<div class="form-group">
 		                    <label for="lastName">Lastname *</label>
 		                    <input id="lastName" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
 		                    <div class="help-block with-errors"></div>
-		                </div>
-		            </div>
+		                	</div>
+		            	</div>
 		        </div>
-		        <div class="row">
+		        		<div class="row">
 		            <div class="col-md-12">
 		                <div class="form-group">
 		                    <label for="email">Email *</label>
@@ -96,6 +115,13 @@
 
 		</form>
 		<br>
+		<div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 	
 
 		</div>
@@ -111,6 +137,7 @@
 }
 	</script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzkvQUm9B8MmAf-ConjrWLL01r9hVRs1k&libraries=places&callback=activatePlacesSearch"></script>
+	<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
 
 
 	
