@@ -18,6 +18,27 @@ app.get("/api/reviews",function(req,res){
 
 });
 
+
+
+app.get("/api/reviews/:company?",function(req,res){
+
+	var searchResult = req.params.company.replace(/([+])+/g, " ");
+
+	db.review.findAll({
+		where:{
+			companyName: searchResult
+		}}).then(function(results){
+		res.json(results);
+
+		
+	});
+
+
+});
+
+
+
+
 //posting an entry into the reviews table 
 //check review.js for the sender side
 

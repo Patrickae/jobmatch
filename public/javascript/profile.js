@@ -1,9 +1,16 @@
 $(document).ready(function() {
 
+
+
 	$("#reviewBtn").on("click", function(event){
 		event.preventDefault();
 		});
 
+
+
+var companyTitleLong= $("#exampleModalLongTitle").text();
+companyTitle=companyTitleLong.replace(/\s+/g, "+");
+     console.log(companyTitle);
 
 
   $("#submit-review").on("click", function(event) {
@@ -15,11 +22,11 @@ $(document).ready(function() {
         employmentStatus = true;
       }else{
         employmentStatus = false;
-        }; 
+       }; 
 
-var companyTitle= $("#exampleModalLongTitle").text();
+	
 //save info as an onject to sent to the api
-      var newReview = {
+     var newReview = {
       	thisCompany: $("#exampleModalLongTitle").text(),
         currentEmployee: employmentStatus,
         rating: $("#rating").val(),
@@ -30,11 +37,10 @@ var companyTitle= $("#exampleModalLongTitle").text();
         q5: $("#employerAdvice").val().trim()
       };
 
- 		companyTitle=companyTitle.replace(/\s+/g, "+");
-     	 console.log(companyTitle);
+ 	
     
       
-      submitPost(newReview, companyTitle);
+     submitPost(newReview, companyTitle);
 
      
 	});
@@ -46,5 +52,89 @@ var companyTitle= $("#exampleModalLongTitle").text();
         window.location.href = "/profile?companyName="+route;
     });
   };
+
+
+  var oneStar = 0;
+  var twoStar = 0;
+  var threeStar = 0;
+  var fourStar = 0;
+  var fiveStar = 0;
+
+
+  $.get("/api/reviews/"+companyTitle).then(function(result){
+  	console.log(result);
+  	for(i=0; i< result.length; i++){
+	  	if(result[i].rating === 1){
+			oneStar += 1;
+		}else if(result[i].rating === 2){
+			twoStar += 1;
+		}else if(result[i].rating === 3){
+			threeStar += 1;
+		}else if(result[i].rating === 4){
+			fourStar += 1;
+		}else if(result[i].rating === 5){
+			fiveStar += 1;
+		}
+	};
+
+	console.log(oneStar)
+
+  }).then(function(){
+
+
+
+
+
+
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ["1", "2", "3", "4", "5"],
+        datasets: [{
+            label: '# of Votes',
+            data: [oneStar, twoStar, threeStar, fourStar, fiveStar],
+            backgroundColor: [
+              'rgba(247,0,68,1)',
+                'rgba(247,133,0, 1)',
+                'rgba(246,214,0, 1)',
+                'rgba(6,111,165, 1)',
+                'rgba(17,205,134, 1)'
+                
+            ],
+            borderColor: [
+                'rgba(247,0,68,1)',
+                'rgba(247,133,0, 1)',
+                'rgba(246,214,0, 1)',
+                'rgba(6,111,165, 1)',
+                'rgba(17,205,134, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+    	responsive: true,
+    	legend:{
+    		position: "top"
+    	},
+    	title:{
+    		display:true,
+    		text: "Total Ratings for "+companyTitleLong
+
+    	}
+    }
+});
+
+
+
+});
+
+
+
+
+
+
+
+
 
 });

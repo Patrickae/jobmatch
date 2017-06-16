@@ -1,38 +1,59 @@
 <div class="contianer">
 
-<h1> This is a list of reviews for {{thisCompany}}</h1>
+    <h1> This is a list of reviews for {{thisCompany}}</h1>
 
-<hr/>
- <button class="btn btn-success" id="reviewBtn" value={{thisCompany}} data-toggle="modal" data-target="#exampleModalLong">Write a review</button>
- <hr/>
-{{#each review}}
-<div class="panel panel-default">
-            <div class="panel-heading">
-             <h3 class="panel-title">{{this.companyName}}</h3>                 
-             </div>
-            <div class="panel-body">
-            {{#if this.reviewerStatus}}
-                <h4>Current Employee</h4>
-            {{else}}
-                <h4>Former Employee</h4>
-            {{/if}}
-                <h5>Rating: {{this.rating}}</h5>
-                <br/>
-                <h5>What is your experience with {{this.companyName}}?</h5>
-                <p> {{this.question1}}</p>
-                <h5>What are the pros of working here?</h5>
-                <p> {{this.question2}}</p>
-                <h5>What are the cons?</h5>
-                <p> {{this.question3}}</p>
-                <h5>What advise would you give perspective employees</h5>
-                <p> {{this.question4}}</p>
-                <h5>What advise whould you give management?</h5>
-                <p> {{this.question5}}</p>
+    <hr/>
+     <button class="btn btn-success" id="reviewBtn" value={{thisCompany}} data-toggle="modal" data-target="#exampleModalLong">Write a review</button>
+
+     <div class="col-xs-2"></div>
+     <button class="btn btn-warning" id="backBtn" value={{thisCompany}}>Back to Search</button>
+     <hr/>
+
+
+
+    <div class= "row">
+
+        <div class="col-sm-7 col-xs-12">
+
+            {{#each review}}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{this.companyName}}</h3>                 
+                </div>
+                <div class="panel-body">
+                    {{#if this.reviewerStatus}}
+                    <h4>Current Employee</h4>
+                    {{else}}
+                    <h4>Former Employee</h4>
+                    {{/if}}
+                    <h5>Rating: {{this.rating}}</h5>
+                    <br/>
+                    <h5>What is your experience with {{this.companyName}}?</h5>
+                    <p> {{this.question1}}</p>
+                    <h5>What are the pros of working here?</h5>
+                    <p> {{this.question2}}</p>
+                    <h5>What are the cons?</h5>
+                    <p> {{this.question3}}</p>
+                    <h5>What advise would you give perspective employees</h5>
+                    <p> {{this.question4}}</p>
+                    <h5>What advise whould you give management?</h5>
+                    <p> {{this.question5}}</p>
                
+                </div>
             </div>
+            {{/each}}
         </div>
 
-{{/each}}
+
+        <div class="col-sm-5 col-xs-12">
+            <canvas id="myChart" width="100" height="100"></canvas>
+        </div>
+
+
+    </div>
+</div>
+
+
 
 
 

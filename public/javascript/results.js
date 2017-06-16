@@ -6,9 +6,16 @@ $(document).ready(function() {
 		event.preventDefault();
 
 		
+		var clickedComp = $(this).attr("value");
+
+		clickedComp = clickedComp.replace(/([&])+/g, "and");
+
+
 		var newPost ={
-			companyName: this.value.trim()
+			companyName: clickedComp
 		}; 
+
+		console.log(newPost.companyName);
 
 		submitPost(newPost, newPost.companyName);
 
