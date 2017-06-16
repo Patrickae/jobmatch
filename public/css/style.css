@@ -1,0 +1,49 @@
+
+.text-center{
+    text-decoration-color: blue;
+}
+
+.schedule-container {
+    min-width: 800px;
+}
+
+.input-container {
+    min-width: 800px;
+}
+
+.form-box {
+	background-color: white;
+	margin-top: 30px;
+	padding: 30px;
+	box-shadow: 10px 10px 5px #f3f3f3;
+}
+
+.search-box {
+	background-color: white;
+	margin-top: 30px;
+	padding: 30px;
+	box-shadow: 10px 10px 5px #f3f3f3;
+}
+
+body {
+    /*background: url('../images/eunique.jpg');*/
+    /*background-size: 800px;*/
+    background-color: #f8f8f8;
+}
+
+/*h1 {
+	color: 	#428bca;
+	font-family: 'Cinzel Decorative', cursive;
+}
+
+h2 {
+	color: 	#428bca;
+	font-family: 'Cinzel Decorative', cursive;
+}*/
+
+
+.jumbotron {
+    color: white;
+    background-color: rgba(0,0,0,0.3);
+    min-width: 800px;
+}

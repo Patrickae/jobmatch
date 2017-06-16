@@ -1,87 +1,145 @@
 <!DOCTYPE html>
 <html lang="en-us">
 	<head>
-
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 		<meta charset="UTF-8">
 		<title>Job Match Registration Form</title>
 
 		<!-- Bootstrap CSS & JS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="../public/javascript/registration.js"></script>
+		<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+	
 
 	</head>
 	<body>
 		
 		<div class="container">
 
+
+
 			<div class="jumbotron">
-				<h1>Job Match Registration</h1>
-				<h3>Answer these questions and we'll help you to find your dream job.</h3>
-				<!-- <hr>
-				<a href="/" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-eye-open"></span> Search Books</a>
-				<a href="/add" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Add New Book</a>
-				<a href="/all" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-th-list"></span> All Books</a>
-				<a href="/long" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-th-list"></span> Long Books</a>
-        <a href="/short" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-th-list"></span> Short Books</a> -->
+				<h1 class="text-center">Youniquee</h1>
+				<h3>Please take a moment to fill out this registration form so that we can best match you with you dream job.</h3>
 			</div>
+			<!-- Button trigger modal -->
+	<button type="button text-center" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+	  Registration
+	</button>
 
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title"><strong>Registration Form</strong></h3>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	        		<h3 class="modal-title" id="exampleModalLongTitle">Registration Form</h3>
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          		<span aria-hidden="true">&times;</span>
+	        		</button>
+	      		</div>
+	      		<div class="modal-body">
+
+				<form id="contact-form" role="form">
+
+		    	<!-- <div class="messages"></div> -->
+
+		    		<div class="controls">
+
+		        		<div class="row">
+		            			<div class="col-sm-6">
+		                			<div class="form-group">
+		                    		<label for="firstName">Firstname *</label>
+		                    		<input id="firstName" type="text" name="name" class="form-control" placeholder="Please enter your firstname *"
+		                    		required="required" data-error="Firstname is required.">
+		                    		<div class="help-block with-errors"></div>
+		                		</div>
+		            		</div>
+		            	<div class="col-sm-6">
+		                	<div class="form-group">
+		                    <label for="lastName">Lastname *</label>
+		                    <input id="lastName" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+		                    <div class="help-block with-errors"></div>
+		                	</div>
+		            	</div>
+		        </div>
+		        		<div class="row">
+		            <div class="col-md-12">
+		                <div class="form-group">
+		                    <label for="email">Email *</label>
+		                    <input id="email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+		                    <div class="help-block with-errors"></div>
+		                </div>
+		            </div>
+		            <div class="col-sm-12">
+		                <div class="form-group">
+		                    <label for="location">Location</label>
+		                    <input id="location" type="text" name="location" class="form-control" placeholder="City and State">
+		                    <div class="help-block with-errors"></div>
+		                </div>
+		            </div>
+		            <div class="col-sm-12">
+			            <div class="form-group">
+						<label for="employ">Employment Status</label>
+							<select class="form-control" id="employ">
+								<option>Employed</option>
+								<option>Unemployed</option>
+							</select>
 						</div>
-
-						<div class="panel-body">
-							<form action="" method="POST" role="form">
-								<div class="form-group">
-									<label for="">First Name</label>
-									<input type="text" class="form-control" id="firstName" placeholder="First Name">
-								</div>
-								<div class="form-group">
-									<label for="">Last Name</label>
-									<input type="text" class="form-control" id="lastName" placeholder="Last Name">
-								</div>
-								<div class="form-group">
-									<label for="">Email Address</label>
-									<input type="text" class="form-control" id="email" placeholder="Email Address">
-								</div>
-								<div class="form-group">
-									<label for="location">Location</label>
-									<input type="text" class="form-control" id="location" placeholder="City and State">
-								</div>
-
-    							<div class="form-group">
-								    <label for="employ">Employment Status</label>
-								    <select class="form-control" id="employ">
-								      <option>Employed</option>
-								      <option>Unemployed</option>
-								    </select>
-								  </div>
-								  <div class="form-group">
-								    <label for="level">Experience Level</label>
-								    <select class="form-control" id="level">
-								      <option>Entry Level</option>
-								      <option>Mid Level</option>
-								      <option>Senior Level</option>
-								    </select>
-								  </div>
-    					
-							</form>
-							<br>
-							<div class="text-left">
-								<button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="glyphicon glyphicon-plus"></span>&nbsp;Submit</button>
-							</div>
-						</div>
-
 					</div>
-				</div>			
-			</div>
+					<div class="col-sm-12">
+						<div class="form-group">
+						    <label for="level">Experience Level</label>
+						    <select class="form-control" id="level">
+						      <option>Entry Level</option>
+						      <option>Mid Level</option>
+						      <option>Senior Level</option>
+						    </select>
+						</div>
+					</div>
+		        </div>
+		        <div class="row">
+		            <div class="col-md-12">
+		                <p class="text-muted"><strong>*</strong> These fields are required.</p>
+		            </div>
+		        </div>
+		        <br>
+		        <div class="text-left">
+					<button type="submit" class="btn btn-success" id="add-btn"><span class="glyphicon glyphicon-plus"></span>&nbsp;Submit</button>
+				</div>
+		        
+		    </div>
+
+		</form>
+		<br>
+		<div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
 
 		</div>
+
+	<script type="text/javascript" src="javascript/registration.js"></script>
+
+	<!-- //autocomplete -->
+	<script>
+	function activatePlacesSearch(){
+  		var input = document.getElementById('location');
+
+  		var autocomplete = new google.maps.places.Autocomplete(input);
+}
+	</script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzkvQUm9B8MmAf-ConjrWLL01r9hVRs1k&libraries=places&callback=activatePlacesSearch"></script>
+	<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+
 
 	
 	</body>

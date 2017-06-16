@@ -1,18 +1,26 @@
 $(document).ready(function() {
 
-	  // create an object with the data submited
+	$("#reviewBtn").on("click", function(event){
+		event.preventDefault();
+		});
+
+
+
   $("#submit-review").on("click", function(event) {
       event.preventDefault();
 
       var employmentStatus;
-
+//set the employment status to a boolean value
       if($("#employment").val() == "Current Employee"){
         employmentStatus = true;
       }else{
         employmentStatus = false;
         }; 
 
+var companyTitle= $("#exampleModalLongTitle").text();
+//save info as an onject to sent to the api
       var newReview = {
+      	thisCompany: $("#exampleModalLongTitle").text(),
         currentEmployee: employmentStatus,
         rating: $("#rating").val(),
         q1: $("#overallReview").val().trim(),
@@ -22,18 +30,21 @@ $(document).ready(function() {
         q5: $("#employerAdvice").val().trim()
       };
 
-      
-
-      submitPost(newReview);
+ 		companyTitle=companyTitle.replace(/\s+/g, "+");
+     	 console.log(companyTitle);
     
+      
+      submitPost(newReview, companyTitle);
+
+     
 	});
 
 
-
-  function submitPost(Post) {
-    $.post("/api/reviews/", Post, function() {
-      window.location.href = "/reviews";
+//create function to post to the API
+  function submitPost(Post, route) {
+    $.post("/reviews", Post).then(function() {
+        window.location.href = "/profile?companyName="+route;
     });
-  }
+  };
 
 });

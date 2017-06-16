@@ -1,0 +1,128 @@
+<div class="container">
+
+<h1> This is a list of reviews for {{thisCompany}}</h1>
+
+<hr/>
+ <button class="btn btn-success" id="reviewBtn" value={{thisCompany}} data-toggle="modal" data-target="#exampleModalLong">Write a review</button>
+ <hr/>
+{{#each review}}
+<div class="panel panel-default">
+            <div class="panel-heading">
+             <h3 class="panel-title">{{this.companyName}}</h3>                 
+             </div>
+            <div class="panel-body">
+            {{#if this.reviewerStatus}}
+                <h4>Current Employee</h4>
+            {{else}}
+                <h4>Former Employee</h4>
+            {{/if}}
+                <h5>Rating: {{this.rating}}</h5>
+                <br/>
+                <h5>What is your experience with {{this.companyName}}?</h5>
+                <p> {{this.question1}}</p>
+                <h5>What are the pros of working here?</h5>
+                <p> {{this.question2}}</p>
+                <h5>What are the cons?</h5>
+                <p> {{this.question3}}</p>
+                <h5>What advise would you give perspective employees</h5>
+                <p> {{this.question4}}</p>
+                <h5>What advise whould you give management?</h5>
+                <p> {{this.question5}}</p>
+               
+            </div>
+        </div>
+
+{{/each}}
+
+
+
+
+   <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h2 class="modal-title"  style="padding-left: 20px" id="exampleModalLongTitle">{{thisCompany}}</h2>
+            
+          </div>
+          <div class="modal-body">
+                <form>
+            
+            <div class="form-group" style="padding: 0px 20px 10px 20px">
+                <h4>What is your relationship to this company?</h4>
+                <select class="form-control" id = "employment">
+                    <option>Current Employee</option>
+                    <option>Former Employee</option>
+                </select>
+            </div>
+
+            <hr/>   
+
+
+            <div class="form-group" style="padding: 0px 20px 10px 20px">
+                <h4>How would you rate this company overall?</h4>
+                <select class="form-control" id = "rating" >
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+
+            <hr/>
+
+            <div class="form-group" style="padding: 0px 20px 10px 20px">
+                <label for="overallReview" class="col-sm-12 control-label">Give a brief overview of your experience</label>
+                <input class="form-control" rows="5" id ="overallReview" placeholder="your experience"></input>
+            </div>
+
+            <div class="form-group" style="padding: 0px 20px 10px 20px">
+                <label for="pros" class="col-sm-12 control-label">What are the pros of working here?</label>
+                <input class="form-control" rows="5" id ="pros" placeholder="pros"></input>
+            </div>
+
+            <div class="form-group" style="padding: 0px 20px 10px 20px">
+                <label for="cons" class="col-sm-12 control-label">What are the cons?</label>
+                <input class="form-control" rows="5" id ="cons" placeholder="cons"></input>
+            </div>
+
+            <div class="form-group" style="padding: 0px 20px 10px 20px">
+                <label for="applicantAdvice" class="col-sm-12 control-label">What advice would you give perspective employees?</label>
+                <input class="form-control" rows="5" id ="applicantAdvice" placeholder="..."></input>
+            </div>
+
+            <div class="form-group" style="padding: 0px 20px 10px 20px">
+                <label for="employerAdvice" class="col-sm-12 control-label">What advice would you give to management in this company?</label>
+                <input class="form-control" rows="5" id ="employerAdvice" placeholder="..."></input>
+            </div>
+
+            
+            <br/>
+            
+            
+            <div class="form-group">
+
+                
+                
+            </div>
+        </form>
+        <br>
+        <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" id="submit-review">Submit</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+       
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzkvQUm9B8MmAf-ConjrWLL01r9hVRs1k&libraries=places&callback=activatePlacesSearch"></script>
+
+<script type="text/javascript" src = "/javascript/profile.js"></script>
