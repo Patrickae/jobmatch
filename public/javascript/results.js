@@ -5,10 +5,12 @@ $(document).ready(function() {
 	$(".profileBtn").on("click", function(event){
 		event.preventDefault();
 
+		//local store current url for nav use
 		localStorage.setItem("lastPage", document.URL)
 		
-		var clickedComp = $(this).attr("value");
 
+		var clickedComp = $(this).attr("value");
+		//replace & with and because the route doesnt like it
 		clickedComp = clickedComp.replace(/([&])+/g, "and");
 
 
@@ -17,7 +19,7 @@ $(document).ready(function() {
 		}; 
 
 		console.log(newPost.companyName);
-
+		//send as post
 		submitPost(newPost, newPost.companyName);
 
 	});
