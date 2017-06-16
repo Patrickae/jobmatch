@@ -23,7 +23,7 @@ module.exports = function(app){
 
 
             }else{
-                res.redirect("/search?");
+                res.redirect("/search");
             }
         });
 
@@ -33,4 +33,5 @@ module.exports = function(app){
 
 
 };
+
 
