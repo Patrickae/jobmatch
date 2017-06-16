@@ -2,6 +2,8 @@
 		<h1 class="text-center">Your Perfect Job Match May Below!</h1>
 
 		<hr>
+		<a href="/search"><button class="btn btn-info">Back to Search</button></a>
+		<hr/>
 		
 			<div>
 				{{#each posting}}
@@ -16,7 +18,7 @@
     			<br/>
     			<p> {{this.summary}}</p>
     			<a href ={{this.url}} class="btn btn-success" target="_blank"><span class="glyphicon glyphicon-search"></span></a>
-    			<button class="btn btn-primary profileBtn" value="{{this.company}}">View Company Profile</button>
+    			<button class="btn btn-primary profileBtn" value="{{this.company}}" >View Company Profile</button>
   			</div>
 		</div>
 			

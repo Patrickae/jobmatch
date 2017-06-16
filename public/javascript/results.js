@@ -5,6 +5,7 @@ $(document).ready(function() {
 	$(".profileBtn").on("click", function(event){
 		event.preventDefault();
 
+		localStorage.setItem("lastPage", document.URL)
 		
 		var clickedComp = $(this).attr("value");
 

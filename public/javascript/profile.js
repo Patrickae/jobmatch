@@ -7,6 +7,16 @@ $(document).ready(function() {
 		});
 
 
+	$("#backBtn").on("click",function(){
+		event.preventDefault();
+
+		var lastPage = localStorage.getItem("lastPage");
+
+		console.log(lastPage);
+		window.location.href = lastPage;
+
+
+	});
 
 var companyTitleLong= $("#exampleModalLongTitle").text();
 companyTitle=companyTitleLong.replace(/\s+/g, "+");
@@ -103,13 +113,13 @@ var myChart = new Chart(ctx, {
                 
             ],
             borderColor: [
-                'rgba(247,0,68,1)',
-                'rgba(247,133,0, 1)',
-                'rgba(246,214,0, 1)',
-                'rgba(6,111,165, 1)',
-                'rgba(17,205,134, 1)'
+                'rgba(255,255,255, 1)',
+                'rgba(255,255,255, 1)',
+                'rgba(255,255,255, 1)',
+                'rgba(255,255,255, 1)',
+                'rgba(255,255,255, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 3
         }]
     },
     options: {
