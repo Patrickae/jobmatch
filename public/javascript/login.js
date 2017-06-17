@@ -1,4 +1,4 @@
-(document).ready(function() {
+$(document).ready(function() {
 
 
     // create an object with the data submited
@@ -19,13 +19,13 @@
 
     });
 
-    function loginUser(Post) {
+    function loginUser(Post, dataTrue) {
         console.log("here", Post);
-        $.post("api/user/", Post, function(){
+        $.post("api/login", Post, function(){
             console.log("here again");
             window.location.href = "/search";
         });
-    }
+    };
 
 
     $("#login-email").val("");

@@ -118,3 +118,24 @@ h2 {
     background-color: rgba(0,0,0,0.3);
     min-width: 800px;
 }
+
+#navLogo{
+	font-family: 'Bungee Inline', cursive;
+	text-shadow: 2px 2px 5px #181818;
+	color: white;
+}
+
+.navbar{
+	background-color: #5cb85c;
+}
+
+.companyWell{
+	background-color: lightblue;
+}
+
+
+.companyWell:hover{
+	background-color: #5cb85c;
+	color:white;
+	cursor:pointer;
+}

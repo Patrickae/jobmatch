@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
 
-
+	//prevent default for btn that brings up modal
 	$("#reviewBtn").on("click", function(event){
 		event.preventDefault();
 		});
 
-
+	//go back to localy stored URL
 	$("#backBtn").on("click",function(){
 		event.preventDefault();
 
@@ -14,10 +14,9 @@ $(document).ready(function() {
 
 		console.log(lastPage);
 		window.location.href = lastPage;
-
-
 	});
 
+//replace " " with + in order to put company in route
 var companyTitleLong= $("#exampleModalLongTitle").text();
 companyTitle=companyTitleLong.replace(/\s+/g, "+");
      console.log(companyTitle);
@@ -53,6 +52,31 @@ companyTitle=companyTitleLong.replace(/\s+/g, "+");
      submitPost(newReview, companyTitle);
 
      
+	});
+
+
+  	$("#navSearch").on("click", function(){
+		event.preventDefault();
+		//save entries as variables
+	var position = $("#navKeyWord").val().trim();
+
+	var location = $("#navLocation").val().trim();
+
+	var level = $("#navLevel").val();
+		//set to all lowercase
+
+	position = position.replace(/\s+/g, "+").toLowerCase();
+	location = location.replace(/\s+/g, "+").toLowerCase();
+	level = level.replace(/\s+/g, "_").toLowerCase();
+
+	if(level == "Any"){
+		level = "";
+	};
+
+		//redirect to search results
+		window.location.href = "/results?location=" + location + "&keyword=" + position + "&joblevel=" + level;
+
+
 	});
 
 
@@ -100,7 +124,7 @@ var ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ["1", "2", "3", "4", "5"],
+        labels: ['1 (worst)', "2", "3", "4", "5 (best)"],
         datasets: [{
             label: '# of Votes',
             data: [oneStar, twoStar, threeStar, fourStar, fiveStar],
@@ -131,7 +155,14 @@ var myChart = new Chart(ctx, {
     		display:true,
     		text: "Total Ratings for "+companyTitleLong
 
-    	}
+    	},
+    	animation:{
+    		animateScale: true,
+    		animateRotate: true
+    	},
+    	cutoutPercentage: 50
+    	
+
     }
 });
 
