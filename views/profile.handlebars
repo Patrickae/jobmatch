@@ -34,16 +34,32 @@
                     {{/if}}
                     <h5>Rating: {{this.rating}}</h5>
                     <br/>
+
+                    {{#if this.question1}}
                     <h5>What is your experience with {{this.companyName}}?</h5>
+                    
                     <p> {{this.question1}}</p>
+                    {{/if}}
+
+                    {{#if this.question2}}
                     <h5>What are the pros of working here?</h5>
                     <p> {{this.question2}}</p>
+                    {{/if}}
+
+                    {{#if this.question3}}
                     <h5>What are the cons?</h5>
                     <p> {{this.question3}}</p>
+                    {{/if}}
+
+                    {{#if this.question4}}
                     <h5>What advise would you give perspective employees</h5>
                     <p> {{this.question4}}</p>
+                    {{/if}}
+
+                    {{#if this.question5}}
                     <h5>What advise whould you give management?</h5>
                     <p> {{this.question5}}</p>
+                    {{/if}}
                
                 </div>
             </div>

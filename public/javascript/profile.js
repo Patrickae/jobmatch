@@ -99,7 +99,7 @@ var ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['1', "2", "3", "4", "5"],
+        labels: ['Worst', "", "", "", "Best"],
         datasets: [{
             label: '# of Votes',
             data: [oneStar, twoStar, threeStar, fourStar, fiveStar],

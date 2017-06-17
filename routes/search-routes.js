@@ -46,5 +46,31 @@ module.exports = function(app){
 
 	});
 
+	app.get("/companies", function(req, res){
+
+		var searchedCompany = req.query.company;
+
+		searchedCompany = searchedCompany.replace(/[(+)]+/g, " ").toLowerCase();
+
+
+		db.company.findAll({
+			where:{
+				companyName:{
+					$like: "%"+searchedCompany+"%"
+				}
+			}
+		}).then(function(data){
+
+			console.log(data);
+
+			var hbsObject = {
+				company: data
+			};
+    		res.render("results", hbsObject);
+  		 
+			});
+		
+		});
+
 
 };

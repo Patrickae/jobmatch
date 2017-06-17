@@ -22,12 +22,20 @@ $(document).ready(function() {
 		level = "";
 	};
 
-
 		//redirect to search results
 		window.location.href = "/results?location=" + location + "&keyword=" + position + "&joblevel=" + level;
 
 
+	});
 
+	//receive a list of companies by searching 
+	$("#companySearchBtn").on("click", function(){
+
+		var searchedCompany = $("#companySearch").val().trim();
+
+		searchedCompany = searchedCompany.replace(/\s+/g, "+").toLowerCase();
+
+		window.location.href = "/companies?company="+searchedCompany;
 
 	});
 
