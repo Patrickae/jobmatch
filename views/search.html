@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Modak" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Questrial" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<link rel="stylesheet" href="/css/style.css" type="text/css">
+	<title>Job Search Page</title>
+</head>
+<body id ="search_body">
+
+	<div class = "container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<div class="search-box">
+
+					<h2>Search For Your Perfect Job Match</h2>
+
+					<hr>
+
+					<div class="form-group">
+						<label for="Search" class="col-sm-8 control-label">Search By Keyword</label>
+						<input class="form-control" rows="1" id="position" placeholder="Key Word"></input>
+					</div>
+
+					<hr>
+
+					<div class="form-group">
+						<label for="citySearch" class="col-sm-8 control-label">In which City, State?</label>
+						<input class="form-control" rows="1" id="citySearch" placeholder="City Search"></input>
+					</div>
+
+					<hr>
+					
+					<div class="form-group">
+						<label for="level" class="col-sm-8 control-label">What Level?</label>
+						<select class="form-control" id="level">
+							<option>Any</option>
+							<option>Entry level</option>
+							<option>Mid level</option>
+							<option>Senior level</option>
+						</select>
+					</div>
+
+					<hr>
+
+					<div class="form-group">
+						<button type="submit" class="btn btn-success" id="jobSearchBtn">Search Jobs</button>
+					</div>
+				</div>
+
+				<div class="search-box">
+					<h3>Search for a Company Profile</h3>
+
+					<hr>
+
+					<div class="form-group">
+						<label for="Search" class="col-sm-8 control-label">Search By Company</label>
+						<input class="form-control" rows="1" id="companySearch" placeholder="Company Search"></input>
+					</div>
+
+					<hr>
+
+					<button type="submit" class="btn btn-success" id="companySearchBtn">Search Companies</button>
+				</div>
+				<br>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src = "javascript/search.js"></script>
+</body>
+</html>

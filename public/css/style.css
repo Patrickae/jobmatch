@@ -1,0 +1,147 @@
+.rule {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #428bca;
+    margin: 1em 0;
+    padding: 0; 
+} 
+
+.text-center{
+    text-decoration-color: blue;
+}
+
+.schedule-container {
+    min-width: 800px;
+}
+
+.input-container {
+    min-width: 800px;
+}
+
+.shadow {
+	box-shadow: 2px 2px 5px #3c3c3c;
+}
+
+.space {
+	margin-bottom: 20px;
+}
+
+.form-box {
+	background-color: white;
+	margin-top: 40px;
+	padding: 10px 30px 30px 30px;
+	box-shadow: 2px 2px 5px #3c3c3c;
+	border-radius: 10px;
+}
+
+.search-box {
+	background-color: white;
+	margin-top: 40px;
+	padding: 10px 30px 30px 30px;
+	box-shadow: 2px 2px 5px #3c3c3c;
+	border-radius: 10px;
+}
+
+.logo-box {
+	background-color: #5cb85c;
+	height: 80px;
+	opacity: 0.85;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.logo {
+	color: white;
+	font-size: 90px;
+/*	font-family: 'Fugaz One', cursive;*/
+/*	font-family: 'Sigmar One', cursive;*/
+/*	font-family: 'Shrikhand', cursive;*/
+/*	font-family: 'Modak', cursive;*/
+	font-family: 'Bungee Inline', cursive;
+	text-shadow: 3px 3px 5px #3c3c3c;
+}
+
+@media screen and (max-width: 560px) {
+    .logo {
+	color: white;
+	font-size: 60px;
+/*	font-family: 'Fugaz One', cursive;*/
+/*	font-family: 'Sigmar One', cursive;*/
+/*	font-family: 'Shrikhand', cursive;*/
+/*	font-family: 'Modak', cursive;*/
+	font-family: 'Bungee Inline', cursive;
+	text-shadow: 2px 2px 5px #181818;
+}
+}
+
+@media screen and (min-width: 980px) {
+    .logo {
+	color: white;
+	font-size: 120px;
+/*	font-family: 'Fugaz One', cursive;*/
+/*	font-family: 'Sigmar One', cursive;*/
+/*	font-family: 'Shrikhand', cursive;*/
+/*	font-family: 'Modak', cursive;*/
+	font-family: 'Bungee Inline', cursive;
+	text-shadow: 2px 2px 5px #181818;
+}
+
+.form-box {
+	background-color: white;
+	margin-top: 80px;
+	padding: 10px 30px 30px 30px;
+	box-shadow: 2px 2px 5px #3c3c3c;
+	border-radius: 10px;
+}
+}
+
+body {
+    /*background: url('../images/seigaiha.png');*/
+    background: url('../images/subtle_grunge.png');
+    background-repeat: : repeat;
+    background-color: #f8f8f8;
+    font-family: 'Questrial', sans-serif;
+}
+
+h/*1 {
+	color: 	#428bca;
+	font-family: 'Cinzel Decorative', cursive;
+}
+
+h2 {
+	color: 	#428bca;
+	
+}
+*/
+
+.jumbotron {
+    color: white;
+    background-color: rgba(0,0,0,0.3);
+    min-width: 800px;
+}
+
+#navLogo{
+	font-family: 'Bungee Inline', cursive;
+	text-shadow: 2px 2px 5px #181818;
+	color: white;
+}
+
+.navbar{
+	background-color: #5cb85c;
+}
+
+.companyWell{
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #888888;
+	color:#5cb85c;
+	
+}
+
+
+.companyWell:hover{
+	background-color: #5cb85c;
+	color:white;
+	cursor:pointer;
+
+}
