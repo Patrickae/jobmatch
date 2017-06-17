@@ -22,6 +22,10 @@ module.exports = function(app){
 		res.sendFile(path.join(__dirname, "../views/search.html"))
 	});
 
+	app.get("/personality", function(req,res){
+		res.sendFile(path.join(__dirname, "../views/personality.html"))
+	});
+
 	app.get("/profile", function(req,res){
 
 		

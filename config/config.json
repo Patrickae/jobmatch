@@ -1,11 +1,9 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
+
     "password": "DYH-sql-6893",
-=======
-    "password": "",
->>>>>>> f7f96371ba78312700460e9c38cfaff926e35c91
+
     "database": "jobmatch",
     "host": "127.0.0.1",
     "dialect": "mysql"
