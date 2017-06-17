@@ -47,6 +47,17 @@ app.post("/reviews", function(req,res){
 	
 	console.log(req.query);
 
+	var thisCompanyId;
+
+	db.company.findAll({where:
+		{
+			companyName: req.body.thisCompany
+
+
+		}}).then(function(data){
+			 thisCompanyId = data.id
+		});
+
 
 	db.review.create({
 		companyName:req.body.thisCompany,

@@ -1,4 +1,4 @@
-(document).ready(function() {
+$(document).ready(function() {
 
 
     // create an object with the data submited

@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Tminus987",
+    "password": "",
     "database": "jobmatch",
     "host": "127.0.0.1",
     "dialect": "mysql"

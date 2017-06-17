@@ -6,7 +6,7 @@ $('#myModal').on('shown.bs.modal', function () {
 });
     // create an object with the data submited
   $("#add-btn").on("click", function(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
 
     var newUser = {
