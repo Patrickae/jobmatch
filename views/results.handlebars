@@ -1,14 +1,16 @@
 	<div class = "container">
-		<h1 class="text-center">Your Perfect Job Match May Below!</h1>
+		<div class="text-center">
+		<h1>Your Perfect Job Match Below!</h1>
 
-		<hr>
-		<a href="/search"><button class="btn btn-info">Back to Search</button></a>
-		<hr/>
+		<hr class="rule">
+		<a href="/search"><button class="btn btn-success">Back to Search</button></a>
+		<hr class="rule">
+		</div>
 		
-			<div>
+			<div class="space">
 				{{#each posting}}
 
-			<div class="panel panel-default">
+			<div class="panel panel-primary shadow">
   				<div class="panel-heading">
    			 	<h3 class="panel-title">{{this.title}}</h3>   				 
  			 	</div>

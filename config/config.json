@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "root",
-    "password": "",
-    "database": "jobmatch",
+    "username": "b460d75be123ac",
+    "password": "9c63a9d26ca178e",
+    "database": "heroku_ae54212fcb53801",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

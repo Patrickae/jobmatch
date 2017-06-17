@@ -1,0 +1,12 @@
+{
+  "name": "Job Match",
+  "description": "A Project for UNCC Full Stack Development.",
+  "respository": "https://git.heroku.com/younique.git",
+  "success_url": "/login",
+  "image": "heroku/nodejs",
+  "keywords": ["node", "express", "mysql", "handlebars"],
+  "SETUP_BY": {
+      "description": "Who initiated this setup",
+      "value": "Art, Andy, Ed, Janett"
+    }
+  }
