@@ -100,18 +100,19 @@ body {
     background: url('../images/subtle_grunge.png');
     background-repeat: : repeat;
     background-color: #f8f8f8;
+    font-family: 'Questrial', sans-serif;
 }
 
-/*h1 {
+h/*1 {
 	color: 	#428bca;
 	font-family: 'Cinzel Decorative', cursive;
 }
 
 h2 {
 	color: 	#428bca;
-	font-family: 'Cinzel Decorative', cursive;
-}*/
-
+	
+}
+*/
 
 .jumbotron {
     color: white;
@@ -130,7 +131,11 @@ h2 {
 }
 
 .companyWell{
-	background-color: lightblue;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #888888;
+	color:#5cb85c;
+	
 }
 
 
@@ -138,4 +143,5 @@ h2 {
 	background-color: #5cb85c;
 	color:white;
 	cursor:pointer;
+
 }

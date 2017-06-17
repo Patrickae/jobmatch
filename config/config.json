@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
 
-    "password": "DYH-sql-6893",
+    "password": "",
 
     "database": "jobmatch",
     "host": "127.0.0.1",
